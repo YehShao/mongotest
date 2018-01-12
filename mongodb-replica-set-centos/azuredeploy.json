@@ -126,7 +126,7 @@
     }
   },
   "variables": {
-    "baseUrl": "https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/mongodb-replica-set-centos/",
+    "baseUrl": "https://raw.githubusercontent.com/YehShao/mongotest/master/mongodb-replica-set-centos/",
     "baseChinaUrl": "http://msmirrors.blob.core.chinacloudapi.cn/mongodb/mongodb-replica-set-centos/",
     "environmentAzureCloud": {
       "serviceEndPoint": "core.windows.net",
