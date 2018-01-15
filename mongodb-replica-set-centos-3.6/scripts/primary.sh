@@ -14,16 +14,15 @@ cat > /etc/yum.repos.d/mongodb-org-3.6.repo <<EOF
 [mongodb-org-3.6]
 name=MongoDB Repository
 baseurl=https://repo.mongodb.org/yum/redhat/\$releasever/mongodb-org/3.6/x86_64/
-gpgcheck=1
+gpgcheck=0
 enabled=1
-gpgkey=https://www.mongodb.org/static/pgp/server-3.6.asc
 EOF
 
 	#install
 	yum install -y mongodb-org
 
 	#ignore update
-	#sed -i '$a exclude=mongodb-org,mongodb-org-server,mongodb-org-shell,mongodb-org-mongos,mongodb-org-tools' /etc/yum.conf
+	sed -i '$a exclude=mongodb-org,mongodb-org-server,mongodb-org-shell,mongodb-org-mongos,mongodb-org-tools' /etc/yum.conf
 
 	#disable selinux
 	sed -i 's/^SELINUX=.*/SELINUX=disabled/' /etc/sysconfig/selinux
@@ -98,8 +97,8 @@ install_zabbix() {
 
 
 install_mongo3
-disk_format
-install_zabbix
+#disk_format
+#install_zabbix
 
 
 #start mongod
