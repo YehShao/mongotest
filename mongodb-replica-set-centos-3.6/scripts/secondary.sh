@@ -43,7 +43,7 @@ EOF
 	yum install -y mongodb-org
 
 	#ignore update
-	sed -i '$a exclude=mongodb-org,mongodb-org-server,mongodb-org-shell,mongodb-org-mongos,mongodb-org-tools' /etc/yum.conf
+	#sed -i '$a exclude=mongodb-org,mongodb-org-server,mongodb-org-shell,mongodb-org-mongos,mongodb-org-tools' /etc/yum.conf
 
 	#disable selinux
 	sed -i 's/^SELINUX=.*/SELINUX=disabled/' /etc/sysconfig/selinux
